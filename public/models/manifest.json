@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "models": {
+    "nano": {
+      "file": "reverso-nano.onnx",
+      "bytes": 1823483,
+      "sha256": "139a0fc1c87e7d4f470e4fece8fbc1dd2988b9e9899188507e72a1a39bc1d94f",
+      "parameters": 189881,
+      "context_length": 2048,
+      "output_length": 48,
+      "maximum_absolute_error_vs_pytorch": 0.0038890838623046875,
+      "mean_absolute_error_vs_pytorch": 0.0008003877204221984,
+      "maximum_absolute_error_onnx_vs_export_model": 1.9073486328125e-06,
+      "mean_absolute_error_onnx_vs_export_model": 4.98361051389414e-07
+    },
+    "small": {
+      "file": "reverso-small.onnx",
+      "bytes": 8234860,
+      "sha256": "c1cdfe4fdfcc2d36095ffa8587ed9a99b40df07cc76daaa0738d8b97091b80a9",
+      "parameters": 550161,
+      "context_length": 2048,
+      "output_length": 48,
+      "maximum_absolute_error_vs_pytorch": 0.0011677742004394531,
+      "mean_absolute_error_vs_pytorch": 0.0004029058715483795,
+      "maximum_absolute_error_onnx_vs_export_model": 2.384185791015625e-06,
+      "mean_absolute_error_onnx_vs_export_model": 5.546543206946808e-07
+    }
+  }
+}
