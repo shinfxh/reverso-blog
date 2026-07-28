@@ -64,25 +64,14 @@ const MIN_DRAWING_SPAN = 24;
 const GIFT_EVAL_EXAMPLES = giftEvalData.examples as GiftEvalExample[];
 const DEFAULT_EXAMPLE = GIFT_EVAL_EXAMPLES[0];
 const SYNTHETIC_EXAMPLES = [
-  { id: "trend", label: "Trend + seasonality" },
   { id: "sine", label: "Sine wave" },
-  { id: "two-season", label: "Two seasonalities" },
   { id: "sawtooth", label: "Sawtooth" },
 ];
 
 const makePreset = (name: string, length = 2048) => {
   const values = Array.from({ length }, (_, index) => {
-    if (name === "trend") {
-      return 0.035 * index + 1.8 * Math.sin((2 * Math.PI * index) / 32);
-    }
     if (name === "sawtooth") {
       return ((index % 40) / 40) * 8 - 4;
-    }
-    if (name === "two-season") {
-      return (
-        2.4 * Math.sin((2 * Math.PI * index) / 48) +
-        0.8 * Math.sin((2 * Math.PI * index) / 9)
-      );
     }
     return 4 * Math.sin((2 * Math.PI * index) / 40);
   });
